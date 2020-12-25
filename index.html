@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html>
-<body>
-<div id="output">
- <button style="background-color: red;" onclick="alert('Nie zapomnij podpisać mejla')" type="button">
- MEJL
- </button> 
- </div>
-</body>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button {
+  background-color: whitesmoke;
+  color: #000;        
+  border: 2px solid #dd3a28;
+  padding: 16px 16px;
+  text-align: center;
+  font-size: 24px;
+  margin: 4px 2px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+
+.button:hover {
+    background-color:#dd3a28}
+</style>
+</head>
+    <body>
+        <div id="output">
+            <button class="button" onclick="alert('Nie zapomnij podpisa&cacute; mejla')">
+<a href="mailto:dominik.jaskowiec@rmk.krakow.pl?bcc=<me>&subject=p%u0142odowozy&body=Szanowny%20Panie%20Przewodnicz%u0105cy">Wy&sacute;lij mejla</a>
+            </button> 
+        </div>
+    </body>
 </html>
