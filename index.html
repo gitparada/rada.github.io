@@ -4,32 +4,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"
       charset="UTF-8">
 <style>
-.button {
-  background-color: whitesmoke;
-  color: #000;        
+
+.center {
+  max-width: 360px;
+  width: 60%;  
+  padding: 10px;
+  border: 0;
+  margin: auto;
+    
+}    
+    
+a:link, a:visited {
+  background-color: #fff;
+  color: #000;
   border: 2px solid #dd3a28;
-  padding: 16px 16px;
+  padding: 10px 20px;
   text-align: center;
   font-size: 24px;
-  margin: 4px 2px;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  
+  vertical-align: middle;  
 }
 
-.button:hover {
-    background-color:#dd3a28}
+a:hover {
+  background-color: #dd3a28;
+  color: #fff;
+}
+
+a:active {
+  background-color: #dd3a28;
+  color: #dd3a28;  
+}
+    
 </style>
 </head>
     <body>
-        <div id="output">
-            <button class="button" onclick="alert('Nie zapomnij podpisa&cacute; mejla')">
-<a href="mailto:tester@test.gmail.com?subject=UCHWA%C5%81A&body=Szanowny%20Panie%20Przewodnicz%C4%85cy,%0A%0Aprosz%C4%99%20si%C4%99%20odwo%C5%82a%C4%87.%0A%0AZ%20powa%C5%BCaniem,">next</a>
-            </button> 
+        <div class="center">
+            <a onclick="alert('Nie zapomnij podpisa&cacute; mejla')" href="mailto:tester@test.gmail.com?subject=UCHWA%C5%81A&body=Szanowny%20Panie%20Przewodnicz%C4%85cy,%0A%0Aprosz%C4%99%20si%C4%99%20odwo%C5%82a%C4%87.%0A%0AZ%20powa%C5%BCaniem,">Wy&sacute;lij&nbsp;mejla</a>
+            
         </div>
     </body>
 </html>
