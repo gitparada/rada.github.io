@@ -4,47 +4,87 @@
 <meta name="mejl" content="width=device-width, initial-scale=1"
       charset="UTF-8">
         
-    <title>Napisz do Jaśkowiaka</title>
+    <title>BATON</title>
 <style>
 
-.center {
-  max-width: 480px;
-  width: 80%;  
+.container {
+  max-width: 560px;
+  width: 90%;  
   padding: 10px;
-  border: 0;
+  border: 10px solid hotpink;
   margin: auto;
+}
     
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
 }    
     
-a:link, a:visited {
+button {
   background-color: #fff;
-  color: #000;
+  color: #000;     
   border: 2px solid #dd3a28;
-  padding: 10px 20px;
+  padding: 16px 16px;
   text-align: center;
   font-size: 24px;
-  text-decoration: none;
+  margin: 4px 2px;
   display: block;
-  
-}
-a:hover {
-  background-color: #dd3a28;
-  color: #fff;
-}
-
-a:active {
-  background-color: #dd3a28;
-  color: #dd3a28;  
+  font-size: 24px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  align-self: center;
 }
     
+button:hover,
+button:focus {
+    background: #dd3a28;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}    
+
+
+    div {
+        border: 
+        
+    }    
 </style>
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+       $("#gen").click(function(){
+    $("p").append(" <b>Appended text</b>.");
+  });
+  });      
+        </script>
+        
+        
 </head>
     <body>
-        <div class="center">długi tekst</div>
-        <div class="center">
+        <div class="container">
             
-            <a onclick="alert('Nie zapomnij podpisa&cacute; mejla')" href="mailto:tester@test.gmail.com?subject=UCHWA%C5%81A%20NR%20XLVIII/1298/20%20RADY%20MIASTA%20KRAKOWA%20z%20dnia%2018%20listopada%202020%20r.%20w%20sprawie%20przepis%C3%B3w%20porz%C4%85dkowych%20zwi%C4%85zanych%20z%20eksponowaniem%20drastycznych%20tre%C5%9Bci%20na%20obszarze%20Krakowa&body=Szanowny%20Panie%20Przewodnicz%C4%85cy,%0A%0Aprosz%C4%99%20si%C4%99%20odwo%C5%82a%C4%87.%0A%0AZ%20powa%C5%BCaniem,">Przygotuj&nbsp;mejla</a>
-            
-        </div>
+            <p>
+                Przygotowałyśmy piękny tekst klikajta i podpisujta
+                
+            </p>
+            </div>
+        
+       <div class="center">
+           <p></p>
+       <button id="gen" autofocus>
+           <b>click</b>
+           </button>    
+           
+        </div>   
     </body>
 </html>
