@@ -35,7 +35,8 @@ button {
   cursor: pointer;
   align-self: center;
   width: 40%;
-  height: 40%;  
+  height: 40%;
+  border-radius: 2px;  
 
 }
     
@@ -58,6 +59,7 @@ button:active {
 
   
 </style>
+   
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -81,7 +83,7 @@ button:active {
         
        <div class="center">
         
-       <button autofocus input type="submit" onclick="generateEmail()">
+       <button id="emailTo" autofocus type="submit" onclick="alert('Nie zapomnij podpisa&cacute; mejla')">
            <b>Przygotuj</b>
            </button>  </div>  
       <h3>Podpis</h3>
