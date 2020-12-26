@@ -61,15 +61,10 @@ button:active {
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+    
     $(function generateEmail() {
-  var emailTo = $("#teamName").val();
-  var emailCC = $("#CC").val();
-  var emailSubject = "Escalation Request - Ticket #: " + $("#ticketNumber").val();
-  var emailBody = "Issue: " + $("#issue").val() + "%0A%0AContact info: " + $("#contactInformation").val() + "%0A%0ARequested action: " + $(".requestedAction:checked").val();
-  location.href = "mailto:" + emailTo + "?" + 
-    (emailCC ? "cc=" + emailCC : "") + 
-    (emailSubject ? "&subject=" + emailSubject : "") + 
-    (emailBody ? "&body=" + emailBody : "");
+  var inputName = $("#inputName").val();
+  location.href = "mailto:input@test.gmail.com?subject=UCHWA%C5%81A%20NR%20XLVIII/1298/20%20RADY%20MIASTA%20KRAKOWA%20z%20dnia%2018%20listopada%202020%20r.%20w%20sprawie%20przepis%C3%B3w%20porz%C4%85dkowych%20zwi%C4%85zanych%20z%20eksponowaniem%20drastycznych%20tre%C5%9Bci%20na%20obszarze%20Krakowa&body=Szanowny%20Panie%20Przewodnicz%C4%85cy,%0A%0Aprosz%C4%99%20si%C4%99%20odwo%C5%82a%C4%87.%0A%0AZ%20powa%C5%BCaniem," + (inputName ? "%0A%0A" + inputName : "");
 });
 </script>
         
@@ -82,32 +77,19 @@ button:active {
                 Przygotowałyśmy piękny tekst klikajta i podpisujta
                 
             </p>
-            </div>
+            
         
        <div class="center">
-           <p></p>
-       <button id="mailTo" autofocus>
+        
+       <button autofocus input type="submit" onclick="generateEmail()">
            <b>Przygotuj</b>
-           </button>    
-           
-        </div>   
-        <h1>Team</h1>
-    <select id="teamName">
-	<option value="a@a.com">Team A</option>
-	<option value="b@b.com">Team B</option>
-	<option value="c@c.com">Team C</option>
-</select><br><br>
-<h1>CC</h1>
-<input type="text" id="CC"><br><br>
-<h1>Issue</h1>
-<input type="text" id="issue"><br><br>
-<h1>Ticket Number</h1>
-<input type="text" id="ticketNumber"><br><br>
-<h1>Customer contact info</h1>
-<input type="text" id="contactInformation"><br><br>
-<h1>Requested action</h1>
-<input type="radio" name="requestedAction" class="requestedAction" value="Expedite service" id="reqActExpediteService" checked>Expedite service<br>
-<input type="radio" name="requestedAction" class="requestedAction" value="Callback" id="reqActCallback">Callback<br><br>
-<input type="submit" value="Generate email" onclick="generateEmail()">
+           </button>  </div>  
+      <h3>Podpis</h3>
+<input type="text" id="inputName"><br><br>    
+        </div> 
+
+
+
+
     </body>
 </html>
