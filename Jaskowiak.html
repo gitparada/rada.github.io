@@ -19,7 +19,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
   border: 3px solid green;
 }    
     
@@ -32,41 +31,47 @@ button {
   font-size: 24px;
   margin: 4px 2px;
   display: block;
-  font-size: 24px;
   transition-duration: 0.4s;
   cursor: pointer;
   align-self: center;
+  width: 40%;
+  height: 40%;  
+
 }
     
-button:hover,
-button:focus {
+button:hover{
     background: #dd3a28;
+    color: #fff;
 }
 
 button:focus {
+    background: #dd3a28;
     outline: 1px solid #fff;
     outline-offset: -4px;
 }
 
 button:active {
+    color: #dd3a28;
     transform: scale(0.99);
 }    
 
 
-    div {
-        border: 
-        
-    }    
+  
 </style>
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-       $("#gen").click(function(){
-    $("p").append(" <b>Appended text</b>.");
-  });
-  });      
-        </script>
+<script>
+    $(function generateEmail() {
+  var emailTo = $("#teamName").val();
+  var emailCC = $("#CC").val();
+  var emailSubject = "Escalation Request - Ticket #: " + $("#ticketNumber").val();
+  var emailBody = "Issue: " + $("#issue").val() + "%0A%0AContact info: " + $("#contactInformation").val() + "%0A%0ARequested action: " + $(".requestedAction:checked").val();
+  location.href = "mailto:" + emailTo + "?" + 
+    (emailCC ? "cc=" + emailCC : "") + 
+    (emailSubject ? "&subject=" + emailSubject : "") + 
+    (emailBody ? "&body=" + emailBody : "");
+});
+</script>
         
         
 </head>
@@ -81,10 +86,28 @@ button:active {
         
        <div class="center">
            <p></p>
-       <button id="gen" autofocus>
-           <b>click</b>
+       <button id="mailTo" autofocus>
+           <b>Przygotuj</b>
            </button>    
            
         </div>   
+        <h1>Team</h1>
+    <select id="teamName">
+	<option value="a@a.com">Team A</option>
+	<option value="b@b.com">Team B</option>
+	<option value="c@c.com">Team C</option>
+</select><br><br>
+<h1>CC</h1>
+<input type="text" id="CC"><br><br>
+<h1>Issue</h1>
+<input type="text" id="issue"><br><br>
+<h1>Ticket Number</h1>
+<input type="text" id="ticketNumber"><br><br>
+<h1>Customer contact info</h1>
+<input type="text" id="contactInformation"><br><br>
+<h1>Requested action</h1>
+<input type="radio" name="requestedAction" class="requestedAction" value="Expedite service" id="reqActExpediteService" checked>Expedite service<br>
+<input type="radio" name="requestedAction" class="requestedAction" value="Callback" id="reqActCallback">Callback<br><br>
+<input type="submit" value="Generate email" onclick="generateEmail()">
     </body>
 </html>
